@@ -12,7 +12,7 @@ def get_base64_encoded_image(image_path):
         return base64.b64encode(img_file.read()).decode('utf-8')
 
 # Placeholder görüntü yolu - kendi dosya yolunuzu buraya yazın
-PLACEHOLDER_IMAGE_PATH = "placeholder.jpeg"  # Bu dosyanın Python kodunuzla aynı dizinde olduğunu varsayıyorum
+PLACEHOLDER_IMAGE_PATH = "D:\Projects\AINewsFeed\OIP.jpg"  # Bu dosyanın Python kodunuzla aynı dizinde olduğunu varsayıyorum
 
 # Görüntüyü base64 formatına dönüştür (eğer dosya mevcutsa)
 if os.path.exists(PLACEHOLDER_IMAGE_PATH):
@@ -20,7 +20,7 @@ if os.path.exists(PLACEHOLDER_IMAGE_PATH):
     PLACEHOLDER_IMAGE = f"data:image/jpeg;base64,{img_base64}"
 else:
     # Dosya bulunamazsa yedek olarak online bir görsel kullan
-    PLACEHOLDER_IMAGE = "https://img.freepik.com/free-vector/artificial-intelligence-ai-robot-server-room-digital-technology-banner_39422-794.jpg"
+    PLACEHOLDER_IMAGE = "Place Holder"
     st.warning(f"Placeholder image not found at {PLACEHOLDER_IMAGE_PATH}. Using fallback image.")
 
 all_sources = ["The Berkeley Artificial Intelligence Research Blog","NVDIA Blog","Microsoft Research","Science Daily","META Research","OpenAI News",
